@@ -1,13 +1,50 @@
-<html>
-  <head>
-    <style>
-      <head> A site </head>
-      body{
-        background: black
-      }
-    </style>
-  </head>
-  <body>
-    <button>Hi</button>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Site Here</title>
+
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Add this script for dark mode/light mode functionality -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Website</h1>
+    </header>
+
+    <nav>
+        <!-- Add navigation links here -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Welcome to Your Website!</h2>
+        <p>This is a simple homepage for your website.</p>
+    </section>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <!-- Footer section if needed -->
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
 </html>
