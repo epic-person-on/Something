@@ -1,12 +1,6 @@
 # Something
-a site
-cuz idk
-hey ryan i'll give you five bucks if you snort an entire packet of flamin hot cheeto mac and cheese dust
+A site for an assignment ig
 
-okay here's some ideas:
+If there are materials posted here, it's likely that we don't own them. And we can't afford lawers so please please please don't sue us
 
-definetly educational material tab
-
-crime.net tab, including greenleaf express (payday 2 reference)
-
-uhhh cars maybe idk
+not a lot else to say here, just a website that may or may not have some hidden secrets
