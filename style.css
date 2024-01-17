@@ -1,11 +1,1 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff; /* Light mode background color */
-    color: #333; /* Light mode text color */
-    transition: background-color 0.3s, color 0.3s;
-}
 
-.dark-mode {
-    background-color: #333; /* Dark mode background color */
-    color: #fff; /* Dark mode text color */
-}
