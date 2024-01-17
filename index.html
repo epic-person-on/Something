@@ -12,28 +12,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Something</title>
-
-    <!-- Add a link to your custom CSS file for light mode styles -->
-    <link rel="stylesheet" href="styles.css" id="theme-style">
-    
-    <!-- Add a script tag to include JavaScript -->
-    <script>
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            // Toggle the 'dark-mode' class on the body element
-            document.body.classList.toggle('dark-mode');
-
-            // Save the user's preference to local storage
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('dark-mode', isDarkMode);
+    <style>
+        /* Light Mode Styles */
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
-        // Check user's preference from local storage on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const isDarkMode = localStorage.getItem('dark-mode') === 'true';
-            document.body.classList.toggle('dark-mode', isDarkMode);
-        });
-    </script>
+        header {
+            padding: 20px;
+            background-color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1f1f1f;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        header.dark-mode {
+            background-color: #333;
+        }
+
+        nav.dark-mode {
+            background-color: #1f1f1f;
+        }
+
+        nav.dark-mode a {
+            color: #fff;
+        }
+
+        nav.dark-mode a:hover {
+            background-color: #333;
+        }
+
+        section.dark-mode {
+            background-color: #121212;
+        }
+
+        h1.dark-mode {
+            color: #61dafb;
+        }
+
+        p.dark-mode {
+            color: #fff;
+        }
+
+        footer.dark-mode {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,7 +131,9 @@
         <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 
-    <!-- Add a button to toggle dark mode -->
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <script>
+</script>
+
+
 </body>
 </html>
