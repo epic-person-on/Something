@@ -8,6 +8,7 @@
 
 
 <br>
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/:interval/:user/https%3A%2F%2Fgithub.com%2Fepic-person-on%2FSomething%2F">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/:interval/:user/epic-person-on%2FSomething%2F">
+
 
 
