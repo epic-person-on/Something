@@ -1,6 +1,9 @@
 <h1 align="center">
   Something
 </h1>
+<p align="center">
+  <img style="border-radius: 10px" src="https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg"></img>
+</p>
 <br>
 <p align="center">
   this is just a school project for doing hosting a website to have all our projects stored
