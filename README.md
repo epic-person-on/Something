@@ -1,10 +1,9 @@
 # Something
-A site for an assignment ig
+# A site for an school assignment ig
 
-If there are materials posted here, it's likely that we don't own them. And we can't afford lawers so please please please don't sue us (btw anti slapp laws prevent sueing to silence people)
+# thus under copyright law what we are doing is under fair use so its not a good idea to sue
 
-can't decide if i should make a dedicated server or just use GH Pages
+# not a lot else to say here, just a website that may or may not have some hidden secrets
 
-not a lot else to say here, just a website that may or may not have some hidden secrets
-
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=epic-person-on)](https://github.com/anuraghazra/github-readme-stats)
 
