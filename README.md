@@ -1,6 +1,6 @@
-<p align="center">
+<h1 align="center">
   Something
-</p>
+</h1>
 <br>
 <p align="center">
   welcome
