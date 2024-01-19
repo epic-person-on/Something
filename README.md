@@ -3,7 +3,7 @@
 </h1>
 <br>
 <p align="center">
-  welcome
+  this is just a school project for doing hosting a website to have all our projects stored
 </p>
 <br>
 <p align="center">
