@@ -11,6 +11,7 @@
 # Our ultimate goal is to create a platform that serves its intended purpose while prioritizing user satisfaction and safety. We highly appreciate user feedback and actively consider it in our ongoing efforts to improve the functionality and user experience of the site**********.
 
 # By using this site, you acknowledge that you have read and understood these expanded terms, and you agree to abide by them. We genuinely value your engagement and welcome any further questions or concerns you may have. Please do not hesitate to reach out to us, as we are here to address any issues and ensure your experience on our platform is a positive one. or attempt to pull a sssniperwolf (ddos/dox us)
+bassically don't be a poop
 #
 
 # please we're broke
