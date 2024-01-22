@@ -178,24 +178,25 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a website with a bunch of widgets and stuff">
-    <meta name="keywords" content="Something">
-    <meta name="author" content="Me">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta name="description" content="A website with various widgets and content.">
+    <meta name="keywords" content="Something">
+    <meta name="author" content="Your Name">
     <title>Home | Something</title>
     <style>
-        * {box-sizing:border-box}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             background-color: #121212;
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
             text-align: center;
         }
 
@@ -241,80 +242,8 @@
             background-color: #333;
         }
 
-        /* Slideshow Styles */
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
+        /* Add your own styles for slideshow and aside here */
 
-        .mySlides {
-            display: none;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .numbertext {
-            color: #fff;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        .text {
-            color: #fff;
-            font-size: 18px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        .prev, .next {
-            color: #fff;
-            font-size: 24px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-            cursor: pointer;
-        }
-
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        aside {
-            color: #fff;
-            font-size: 16px;
-            padding: 20px;
-        }
     </style>
 </head>
 <body>
@@ -332,35 +261,8 @@
     </nav>
 
     <section>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 10</div>
-                <img src="/imgs/Alpines.png">
-                <div class="text">Caption Text</div>
-            </div>
-            
-            <!-- Add more slides as needed -->
-
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <!-- Add more dots as needed -->
-        </div>
-        
-        <aside>I have no clue how to make this look nice haha</aside>
+        <!-- Your slideshow and aside content goes here -->
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <footer>
         <p>&copy; This is a website</p>
@@ -371,27 +273,27 @@
         showSlides(slideIndex);
         
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+          showSlides(slideIndex += n);
         }
         
         function currentSlide(n) {
-            showSlides(slideIndex = n);
+          showSlides(slideIndex = n);
         }
         
         function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
         }
     </script>
 </body>
