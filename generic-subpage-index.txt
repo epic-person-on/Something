@@ -49,6 +49,7 @@
 
         section {
             padding: 50px;
+            background-color: white;
         }
 
         h1 {
