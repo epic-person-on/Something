@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Something</title>
     <style>
+        
+        * {box-sizing:border-box}
+
+
         body {
             background-color: #121212;
             color: #fff;
@@ -48,21 +52,108 @@
 
         section {
             padding: 50px;
+            background-color: #e3e3e3;
         }
 
         h1 {
             color: #61dafb;
         }
+       h2 {
+            color: black;
+        }
 
         p {
             font-size: 18px;
             line-height: 1.6;
+            color: black;
         }
 
         footer {
             padding: 20px;
             background-color: #333;
         }
+        * {box-sizing:border-box}
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        .next {
+          right: 2;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+
+        
+        
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+        img{
+            border-radius: 10px
+        }
+        a {
+          background-image: linear-gradient(
+            to right,
+            #54b3d6,
+            #54b3d6 50%,
+            #e3e3e3 50%
+          );
+          background-size: 200% 100%;
+          background-position: -100%;
+          display: inline-block;
+          padding: 5px 0;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:before{
+          content: '';
+          background: #54b3d6;
+          display: block;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 3px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover {
+         background-position: 0;
+        }
+        
+        a:hover::before{
+          width: 100%;
+        }
+        
     </style>
 </head>
 <body>
