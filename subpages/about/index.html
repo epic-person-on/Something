@@ -170,6 +170,7 @@
           width: 100%;
         }
         /* Navbar container */
+        /* Navbar container */
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -206,11 +207,7 @@
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-image: linear-gradient(
-            to right,
-            #54b3d6,
-            #54b3d6 50%,
-            #e3e3e3 50%
+  background-color: red;
 }
 
 /* Dropdown content (hidden by default) */
@@ -254,17 +251,16 @@
     <nav>
         <a href="../../">Home</a>
         <a href="#about">About</a>
-        <div class="dropdown">
-            <button class="dropbtn">Projects
+                <div class="dropdown">
+        <button class="dropbtn">Dropdown
             <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-              <a href="#">Ryan/a>
-              <a href="#">Marcus</a>
-              <a href="#">Eli</a>
-        </div>
-  </div>
-
+           <div class="dropdown-content">
+              <a href="subpages/projects" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Projects</a>
+              <a href="#" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Placeholder</a>
+              <a href="#" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Place holder</a>
+            </div>
+          </div>
         <a href="../services">Services</a>
         <a href="../gmes">Educational Materials</a>
         <a href="../random">Random Stuff</a>
