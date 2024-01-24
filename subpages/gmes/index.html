@@ -14,6 +14,19 @@
     <title>Home | Something</title>
     <style>
         
+        .parallax {
+        /* The image used */
+            background-image: url("https://images.pexels.com/photos/2931612/pexels-photo-2931612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=3");
+    
+            /* Set a specific height */
+            min-height: 500px;
+    
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         * {box-sizing:border-box}
 
 
@@ -160,7 +173,7 @@
     <header>
         <h1>Home | Something</h1>
     </header>
-
+    <div class="parallax"></div>
     <nav>
         <a href="../../">Home</a>
         <a href="../about">About</a>
