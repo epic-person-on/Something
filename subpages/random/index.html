@@ -360,27 +360,32 @@
         <div id="jokes-container"></div>
         <button type="button" onclick="change()">Change joke</button>
         <script>
-            function change(){
-                location.reload()
-	    
-            }
-            function fetchJokes() {
-              fetch('https://official-joke-api.appspot.com/random_joke')
-                .then(response => response.json())
-                .then(data => {
-                  var jokesContainer = document.getElementById('jokes-container');
-                  jokesContainer.innerHTML = '<p><strong>Joke:</strong> ' + data.setup + '</p><p><strong>Punchline:</strong> ' + data.punchline + '</p>';
-                })
-                .catch(error => console.log(error));
-            }
-	    window.addEventListener('DOMContentLoaded', function() {
-	      fetchJokes();
-	    }
-	window.addEventListener("keydown", function(e) {
-	    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-	        e.preventDefault();
-	    }
-	}, false);
+		function change() {
+		   location.reload()
+		
+		}
+		
+		function fetchJokes() {
+		   fetch('https://official-joke-api.appspot.com/random_joke')
+		      .then(response => response.json())
+		      .then(data => {
+		         var jokesContainer = document.getElementById('jokes-container');
+		         jokesContainer.innerHTML = '<p><strong>Joke:</strong> ' + data.setup + '</p><p><strong>Punchline:</strong> ' + data.punchline + '</p>';
+		      })
+		      .catch(error => console.log(error));
+		}
+		window.addEventListener('DOMContentLoaded', function () {
+		         fetchJokes();
+		      }
+		var arrow_keys_handler = function(e) {
+		    switch(e.code){
+		        case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
+		            case "Space": e.preventDefault(); break;
+		        default: break; // do not block other keys
+		    }
+		};
+		window.addEventListener("keydown", arrow_keys_handler, false);
+
 
     </script>
         
