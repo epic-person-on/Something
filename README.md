@@ -8,7 +8,6 @@
 <p align="center">  
   Just a lil website with widgets and things, for a school assignment. *Conly voice* What- what else do we put here? something about Aperture Laboratories? okay, uh, yeah alright
   
-
 </p>
 <br>
 <p align="center">
