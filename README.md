@@ -6,7 +6,7 @@
 </p>
 <br>
 <p align="center">  
-  a website for a school project w/ cool widgets n stuff
+  Just a lil website with widgets and things, for a school assignment. *Conly voice* What- what else do we put here? something about Aperture Laboratories? okay, uh, yeah alright
   
 
 
