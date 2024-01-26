@@ -354,6 +354,27 @@
         <hr>
         <h2>Thingy I forgot the name of</h2>
         <iframe src="game.html"></iframe>
+        <hr>
+        <h2>Suppa funny jokes</h2>
+        <img src="https://us-tuna-sounds-images.voicemod.net/2e590bd4-90d5-441f-94aa-89bb460dc92e-1662982649943.jpg" width="400" height="400"></img>
+        <div id="jokes-container"></div>
+        <button type="button" onclick="change()">Change joke</button>
+        <script>
+            function change(){
+                location.reload()
+	    
+            }
+            function fetchJokes() {
+              fetch('https://official-joke-api.appspot.com/random_joke')
+                .then(response => response.json())
+                .then(data => {
+                  var jokesContainer = document.getElementById('jokes-container');
+                  jokesContainer.innerHTML = '<p><strong>Joke:</strong> ' + data.setup + '</p><p><strong>Punchline:</strong> ' + data.punchline + '</p>';
+                })
+                .catch(error => console.log(error));
+            }
+        </script>
+        
         
     </section>
     <br>
