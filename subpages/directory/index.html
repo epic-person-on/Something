@@ -281,63 +281,9 @@
 
     <section>
         <div class="game-container">
-          <div class="game-select" id="gameSelect"></div>
-        </div>
-        <script>
-          var gamesText = `{
-    "games":[
-        {
-            "name":"Home",
-            "img":"/imgs/home.pnhg
-            "path":"gfiles/0hh1/g
-        },
-        {
-            "name":"About",
-            "img":"/imga/about.png",
-            "path":"gfiles/0hn0/"
-        },
-        {
-            "name":"2048",
-            "img":"img/2048.png",
-            "path":"gfiles/2048/"
-        },
-        {
-            "name":"World's Hardest Game",
-            "img":"img/hardestgame.jpg",
-            "path":"gfiles/worlds-hardest-game/"
-        }
-    ]
-}`;
-var gameObject = JSON.parse(gamesText);
-for (i in gameObject.games) {
-  let elem1 = document.createElement("div");
-  elem1.className = "game-button";
-  document.getElementById("gameSelect").appendChild(elem1);
-  console.log("div made");
-  let elem2 = document.createElement("a");
-
-  elem2.href = gameObject.games[i].path;
-
-  elem1.appendChild(elem2);
-  console.log("a made");
-  let elem3 = document.createElement("img");
-  elem3.src = gameObject.games[i].img;
-  elem3.alt = gameObject.games[i].name;
-  elem2.appendChild(elem3);
-  console.log("img made");
-  let elem4 = document.createElement("p");
-  elem4.innerHTML = gameObject.games[i].name;
-  elem2.appendChild(elem4);
-  console.log("p made");
-}
-            const gamesContainer = document.getElementById("gameSelect");
-const searchBar = document.getElementById("search");
-// Listen for input event on the search bar
-searchBar.addEventListener("input", (e) => {
-  const query = searchBar.value.trim().toLowerCase();
-
-
-        </script>
+      <div class="game-select" id="gameSelect"></div>
+    </div>
+    <script src="loader.js"></script>
     </section>
     <br>
     <br>
