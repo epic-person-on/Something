@@ -280,6 +280,9 @@
     <embed type="text/html" src="chrome://dino" width="500" height="300">
 
     <section>
+        <div class="game-container">
+          <div class="game-select" id="gameSelect"></div>
+        </div>
         <script>
           var gamesText = `{
     "games":[
@@ -327,6 +330,12 @@ for (i in gameObject.games) {
   elem2.appendChild(elem4);
   console.log("p made");
 }
+            const gamesContainer = document.getElementById("gameSelect");
+const searchBar = document.getElementById("search");
+// Listen for input event on the search bar
+searchBar.addEventListener("input", (e) => {
+  const query = searchBar.value.trim().toLowerCase();
+
 
         </script>
     </section>
