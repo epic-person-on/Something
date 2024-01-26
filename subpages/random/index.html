@@ -310,9 +310,16 @@
         <iframe src="game.html" width="500" height="500"></iframe>
         <hr>
 	<h2>Chess</h2>
-	<iframe src="chess2.html"></iframe>
-	    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-	
+	<div id="csoPvcCon"></div>
+	<script type="text/javascript" src="https://www.chessstrategyonline.com/js/widgets.min.js"></script>
+	<script type="text/javascript">
+	    csoPlayVsComputer({
+	        boardStyle: "default",
+		pieceStyle: "uscf",
+		showCoordinates: true,
+		width: 420
+	    });
+	</script>
 
 
 
