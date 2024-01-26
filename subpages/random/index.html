@@ -14,6 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random | Something</title>
     <style>
+        canvas {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 640px;
+            height: 640px;
+            margin: -320px 0 0 -320px;
+        }
         .parallax {
         /* The image used */
             background-image: url("https://images.pexels.com/photos/12992471/pexels-photo-12992471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=3");
@@ -346,6 +354,7 @@
             <button onclick="reset_board()">RESET BOARD</button>
 
         </div>
+        <canvas></canvas>
         <script src="tictactoe.js"></script>
         
     </section>
