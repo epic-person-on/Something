@@ -13,46 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Something</title>
     <style>
-	<!-- HTML !-->
+	button {
+	  background-color: #555555;
+	  color: white;
+	  border: 2px solid #555555;
+	}
+	
+	button:hover {
+	  background-color: white;
+	  color: black;
+	}
 
-	/* CSS */
-	.button-52 {
-	  font-size: 16px;
-	  font-weight: 200;
-	  letter-spacing: 1px;
-	  padding: 13px 20px 13px;
-	  outline: 0;
-	  border: 1px solid black;
-	  cursor: pointer;
-	  position: relative;
-	  background-color: rgba(0, 0, 0, 0);
-	  user-select: none;
-	  -webkit-user-select: none;
-	  touch-action: manipulation;
-	}
-	
-	.button-52:after {
-	  content: "";
-	  background-color: #ffe54c;
-	  width: 100%;
-	  z-index: -1;
-	  position: absolute;
-	  height: 100%;
-	  top: 7px;
-	  left: 7px;
-	  transition: 0.2s;
-	}
-	
-	.button-52:hover:after {
-	  top: 0px;
-	  left: 0px;
-	}
-	
-	@media (min-width: 768px) {
-	  .button-52 {
-	    padding: 13px 50px 13px;
-	  }
-	}
         .list {
         	list-style: none;
         	padding: 0;
@@ -470,7 +441,7 @@
                 <li><a href="subpages/posts/scams.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> About Scammers </a></li>
                 <li><a href="subpages/posts/h2o.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> dihydrogen monoxide (joke post lol) </a></li>
             </ul>
-            <button id="next" class="button-52" role="button">Show More</button>
+            <button id="next">Show More</button>
         </div> 
 	<!--<section style="padding: 50px; background-color: white;">
         <h2 style="color: black;">Other Posts</h2>
