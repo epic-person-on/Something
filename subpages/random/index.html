@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random | Something</title>
     <style>
+
         .parallax {
         /* The image used */
             background-image: url("https://images.pexels.com/photos/12992471/pexels-photo-12992471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=3");
@@ -249,54 +250,8 @@
         img{
             border-radius: 10px
         }
-        .play-area {
-  display: grid;
-  width: 300px;
-  height: 300px;
-  grid-template-columns: auto auto auto;
-}
-.block {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  border: 3px solid white;
-  transition: background 0.2s ease-in-out;
-}
-
-.block:hover {
-  cursor: pointer;
-  background: #0ff30f;
-}
-#block_0,
-#block_1,
-#block_2 {
-  border-top: none;
-}
-
-#block_0,
-#block_3,
-#block_6 {
-  border-left: none;
-}
-
-#block_6,
-#block_7,
-#block_8 {
-  border-bottom: none;
-}
-
-#block_2,
-#block_5,
-#block_8 {
-  border-right: none;
-}
-        .occupied:hover {
-  background: #ff3a3a;
-}
+   
+ 
         
     </style>
     
@@ -325,7 +280,6 @@
     </nav>
     <div class="parallax"></div>
 
-    <embed type="text/html" src="chrome://dino" width="500" height="300">
 
     <section>
         <p>This is where we put our absolutely garbage sense of humor things in</p>
@@ -346,7 +300,32 @@
             <button onclick="reset_board()">RESET BOARD</button>
 
         </div>
+        <hr>
+        <h2> Tetris </h2>
+        <canvas></canvas>
+        <script src="tetris.js"></script>
         <script src="tictactoe.js"></script>
+        <hr>
+        <h2>Atari Breakout</h2>
+        <iframe src="game.html" width="500" height="500"></iframe>
+        <hr>
+	<h2>Chess</h2>
+	<div id="csoPvcCon"></div>
+	<script type="text/javascript" src="https://www.chessstrategyonline.com/js/widgets.min.js"></script>
+	<script type="text/javascript">
+	    csoPlayVsComputer({
+	        boardStyle: "default",
+		pieceStyle: "uscf",
+		showCoordinates: true,
+		width: 420
+	    });
+	</script>
+
+
+
+
+
+        
         
     </section>
     <br>
@@ -357,7 +336,7 @@
     <br>
 
     <footer>
-        <p>&copy; &trademark; &patent; this is a website</p>
+        <p>&copy; this is a website</p>
     </footer>
 </body>
 </html>
