@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../favico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favico.png" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This a website with a bunch of widgets and stuff">
+    <meta name="keywords" content="Something">
+    <meta name="author" content="Me">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>500 | Eli, Marcus & Ryan | Something</title> 
+
+    <style>
+        .parallax {
+          /* The image used */
+          background-image: url("https://images.pexels.com/photos/5873654/pexels-photo-5873654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+          
+          /* Set a specific height */
+          min-height: 500px;
+          
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1 style="text-align:left"><img src="../../favicon.png" height="150" width="150"> How To: Fusion Reactor | Eli | Something</h1>
+        <link rel="stylesheet" href="../../style.css">
+    </header>
+
+    <nav>
+        <a href="../../">Home</a>
+        <a href="../about">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="../projects/ryan" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Ryan</a>
+              <a href="../projects/marcus" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Marcus</a>
+              <a href="../projects/eli" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Eli</a>
+            </div>
+          </div>
+        <a href="../random">Other Stuff</a>
+        <a href="../waiver">.</a>
+    </nav>
+
+    <div class="parallax"></div>
+    <section>
+      <h2>
+        How To: Make a Fusion Reactor from Home
+      <h2>
+      <p>
+        Yes, we're doing this, we're making a fusion reactor. But first, a disclaimer:
+        
+        -This project includes lethal voltage levels. Make sure you know your high voltage safety or have a qualified electrical advisor.
+        -Potentially hazardous levels of x-rays will be produced. Lead shielding of viewports is a must!
+        -Deuterium, an explosive gas, will be used. Make sure to check for fuel leaks.
+        -All the other inherent dangers of a home engineering project of this degree (a wide gamut of potential injuries, damage to the checking account, and the loss of general sanity)
+      </p>
+      <h3>
+        Materials
+      </h3>
+      <p>
+        Here are the minimum required materials:
+
+        -A vacuum chamber, preferably in a spherical shape
+        -A roughing vacuum pump capable of reaching at least 75 microns vacuum
+        -A secondary high vacuum pump, either a turbo pump or oil diffusion pump
+        -A high voltage supply, preferably capable of at least 40kv 10ma - Must be negative polarity
+        -A high voltage divider probe for use with a digital multimeter
+        -A thermocouple or baratron (of appropriate scale) vacuum gauge
+        -A neutron radiation detector, either a proportional He-3 or BF3 tube with counting instrumentation, or a bubble dosimeter
+        -A Geiger counter, preferably a scintillator type, for x-ray detection and safety
+        -Deuterium gas (can be purchased as a gas or extracted from D2O through electrolysis - it is much easier and more effective to use compressed gas)
+        -A large ballast resistor in the range of 50-100k and at least a foot long
+        -A camera and TV display for viewing the inside of the reactor
+        -Lead to shield the camera viewport
+        -General engineering tools, a machine shop if at all possible (although 90% of mine was built with nothing but a dremel and cordless drill, the only thing you really can't build without a shop is scratch building the vacuum chamber)
+      </p>
+      <hr>
+      <h3>
+        Step 1 - Assemble the Vaccum Chamber
+      </h3>
+      <img src = "../../fusion_reactor_step1.png" width="580px" height="295px"></img>
+      <p>
+         A quality high vacuum chamber is required for the fusor to operate. Sometimes an appropriate chamber can be found on eBay, but generally it is best to make one. Parts can be scrounged for several hundred dollars, or purchased new for $500+.
+
+          Get two stainless steel hemispheres, purchase two corresponding conflat-flanges (8" flanges in my case), bore out holes for accessory flanges, and then TIG weld it all together. Flanges are typically either of the KF or the conflat style. Conflat can be seen in the image below as the flanges with bolts, and KF (kwik-flange) are seen as those with only clamps holding an o-ring on the mating surface. Only weld on the inside, never on the outside (since virtual leaks can be formed if both inside and outside are welded). If you've never TIG welded before, it would be wise to have someone with experience do it as the welds must be flawless with no pin-sized holes or porous areas to hold a vacuum.
+
+          After machining, thoroughly clean the chamber and avoid getting fingerprints in it since these will outgas, which means at vacuum pressure molecules in the oil of finger prints or machining oil will become vapor and make it hard to maintain plasma stability or reach a good ultimate vacuum level.
+      </p>
+      <br>
+      <h3>
+        Step 2 - Prepare the High Vaccum Pump
+      </h3>
+      <img src = "../../fusion_reactor_step2.png" width="580px" height="295px"></img>
+      <p>
+         Install the oil diffusion pump (or turbo pump if you have a bit of luck scrounging or a higher budget). Fill the pump with quality diffusion pump oil to whatever fill level the pump documentation suggests, attach the inlet to a valve which then connects to the chamber (see diagram), and attach the outlet to a mechanical backing pump capable of reaching at least around 75 microns (any higher and the diffusion pump will not operate properly or the oil will oxidize quickly).
+
+Make sure the pump is sufficiently cooled, many oil diffusion pumps require water cooling, smaller ones such as the one pictured can get by with a decent air flow.
+
+Once this is assembled, turn on the mechanical pump and wait for the vacuum to reach at least 75 microns. Next you can test the high vacuum pump by turning on the boiler on the diffusion pump. After it warms up (could take a while), the vacuum should rapidly drop below the single micron range.
+      </p>
+      <br>
+      <h3>
+        Step 3 - Build Inner Grid
+      </h3>
+      <img src = "../../fusion_reactor_step3.png" width="580px" height="295px"></img>
+      <p>
+         The inner grid (where the high voltage is applied) must now be built and attached to a high voltage feedthrough.
+
+          It is best to use a metal such as tungsten for the grid wires since it has a very high melting point, and the grid will get extremely hot during high power runs.
+
+          This can be built however you wish, as long as it resembles a spherical shape of roughly 1-1.5 inches in diameter (for a 6-8" chamber), it should work fine.
+
+          The grid should be internally attached to an electrical feedthrough such as the one pictured in the second image. This feedthrough needs to be rated for the cathode voltage that will be used, typically 40kv is a good target voltage.
+      </p>
+      <br>
+      <h3>
+        Step 4 - Assemble the Deuterium System
+      </h3>
+      <img src = "../../fusion_reactor_step4.png" width="580px" height="295px"></img>
+      <p>
+        Deuterium gas is used as the fuel for this fusion reactor. You will need to purchase a tank of this gas (unless you wish to do electrolysis on heavy water, this process will not be documented here but nothing more than a small Hoffman Apparatus is required - higher purity gas can be gotten from a compressed tank).
+
+Attach a high pressure regulator directly to the tank, add an extremely fine-metering needle valve after this (or a laser drilled orifice in the range of 5 microns), then attach this to the chamber. A ball valve can also be installed between the regulator and the needle valve since needle valves are not shutoff valves.
+
+See the attached diagram now updated with the deuterium handling system.
+      </p>
+      <br>
+      <h3>
+        Step 5 - High Voltage
+      </h3>
+      <img src = "../../fusion_reactor_step5.png" width="580px" height="295px"></img>
+      <p>
+        If you can purchase a power supply (occasionally but not commonly found surplus) appropriate for fusion use, the high voltage becomes very simple. Simply take the output of the 40kv negative supply and attach it to the chamber with a physically large high voltage 50-100k ohm ballast resistor in series (large enough that its length will not flash-over if 40kv is applied to it in a plasma run-away or arc discharge).
+
+The difficulty is that it is often difficult if not impossible to find an appropriate fully assembled DC supply of this voltage level that is affordable to the amateur scientist.
+
+Pictured is my high frequency ferrite transformer pair, with a 4-stage multiplier seen behind it.
+
+If a fully assembled power supply (typically manufactured by either Glassman or Spellman), there are a few options:
+-Find an x-ray transformer, and if necessary either reverse the rectifiers for negative polarity or add rectifiers if it has none (an x-ray transformer core won't have rectifiers, it probably will if it is in its oil tank)
+-Build a switching high frequency ferrite power supply. This is what I did, however it requires a bit of EE experience since several aspects must be resonant and if it is ever taken out of tune, the transistors will burn out. Probably not the best option for people with little electrical background.
+      </p>
+      <br>
+      <h3>
+        Step 6 - Setup Neutron Detection
+      </h3>
+      <img src = "../../fusion_reactor_step6.png" width="580px" height="295px"></img>
+      <p>
+        The proof of fusion (and a quantitative analysis of how much fusion) is obtained through detecting neutron radiation, the byproduct of a D-D fusion reaction. There are three options which will be described. They are in order of descending ease of setup.
+
+
+-A Neutron Bubble Dosimeter
+A bubble dosimeter is a small unit with a gel in it that forms bubbles when ionized by neutron radiation. This is the easiest form of neutron detection available since all you have to do is unscrew the top and set it next to the fusor. Some of the drawbacks are that it is an integrative detector which means all you get is a total neutron emission number over the time that it was used, rather than an instantaneous neutron rate. Additionally, they are somewhat hard to get since the only company to make them is Bubbletech in Canada, which has a minimum order of 3 with steep shipping and handling (expect to spend $700+ if ordering directly from them not in a group buy). Additionally, they tend to be fairly worn out after a year of shelf life (although I've kept mine in a refrigerated storage container at 50*F and it seems to be like new after I think more than a year). The advantage is that calibration data is provided with purchase and of course it is easy.
+
+-Silver Activation
+When silver is placed near the reactor (with a moderator [paraffin wax, water, HDPE, etc] between it and the neutron source, since only thermal neutrons will activate the material) it becomes slightly radioactive with decent neutron fluxes. It has a short half life of only a few minutes, but if you quickly put a geiger counter next to the silver, counts can be detected. In my best runs, I have gotten a piece of silver to about 250CPM over background on a CDV-700 geiger-counter. The disadvantages of this are that it requires a decent neutron flux (at least about 100,000 neutrons/s) which is above the average "beginner's first run" neutron rate. Also, it is somewhat difficult to calibrate, and the counts can't be taken until after the fusor has been shut off.
+
+-A Proportional Tube
+Tubes can be purchased which are filled with either BF3 or Helium-3 (some very old tubes are Boron-10 lined inert gas tubes). These tubes, similar to a geiger counter, can be used with a counting device to detect electrical pulses when neutrons pass through the tube. Either an all-in-one counter can be used, often made by a company called Ludlum, or a modular counting system can be made using NIM modules. The tube is surrounded by about 2 inches of moderating material such as wax or water. This is by far the most accurate and useful form of neutron detection, however the cost of a new tube is prohibitive to most people, and they are extremely rare on the surplus market. Also, counting equipment can become quite costly.
+
+NIM Configuration: If you chose to make a NIM setup as I have, the typical layout is a charge sensitive pre-amplifier at the head of the proportional tube, which is plugged into both a high voltage power supply generating positive polarity voltage appropriate for the tube (in the range of 800V-2kV generally). The amplifier also hooks into a shaping amplifier, which is followed by a Single Channel Analyzer (for setting the detection discrimination level), followed by a pulse counter and/or rate meter.
+
+
+Shown in the first picture is my NIM setup, the second picture is the pre-amplifier attached to a moderated helium-3 tube, the third picture is a bubble detector after being exposed to neutrons.
+      </p>
+      <br>
+      <h3>
+        Step 7 - Fire it Up (And cross your fingers, you might die here)
+      </h3>
+      <img src = "../../fusion_reactor_step7.png" width="580px" height="295px"></img>
+      <p>
+        Time to turn it on (don't forget to cover any viewports/cameras with lead! Also x-rays can pour out of ceramic feedthroughs so point them away from people. It is a good idea to be monitoring for x-rays where any people are present). The basic procedure is:
+
+-Turn on the roughing pump and wait for sufficient backing pressure, turn on the diffusion or turbo pump and wait for it to fully warm up or achieve running speed
+-Throttle the chamber back (with the valve between the diffusion/turbo pump and the chamber)
+-Ever so slightly open the needle valve to the deuterium tank
+-Turn up the high voltage until either plasma establishes on the camera, or you've reached 40kv and nothing has happened (don't forget, you only get one chance in your life to screw up with voltages of this degree)
+-If nothing has happened, keep admitting more gas and the pressure should keep going up. Plasma should form around 40kv at about 10-15 microns of deuterium.
+
+If all goes well, you should see on your camera the image below, and you should be detecting neutrons at this point.
+
+Operation is quite a balancing act, since the voltage is controlled by both the power supply, but also by Paschen's Curve and Ohm's Law relating to the pressure in the chamber. Great patience is required to "Get the hang of it", but after doing so it becomes quite simple to run. Operation can be aided by an ion-gun which will not be discussed in this article.
+      </p>
+      
+    </section>
+    <br>
+    <br>
+    <br>
+        <section style="padding: 50px; background-color: white;">
+          <h2 style="color: black;">Other Posts</h2>
+          <a href="middle-school.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Ryan </a>
+          <br>
+          <a href="MMS.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Marcus </a>
+          <br>
+          <a href="ems.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Eli </a>
+          <br>
+          <a href="Rhcoding.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Why github by Ryan </a>
+          <br>
+          <a href="Rhcoding2.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> learning to code by Ryan </a>
+          <br>
+          <a href="MHpost2.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Stock and Investment: Indices and ETFs by Marcus </a>
+          <br>
+          <a href="gamedev.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> About Game Development by Eli </a>
+          <br>
+          <a href="500.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> 500 </a>
+          <br>
+          <a href="inspiration.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Inspiration </a>
+          <br>
+          <a href="scams.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> About Scammers </a>
+          <br>
+          <a href="h2o.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> dihydrogen monoxide (joke post lol) </a>
+          </section>
+    <br>
+    <br>
+    <br>
+
+
+    <footer>
+        <p>&copy;this is a website</p>
+    </footer>
+</body>
+</html>
