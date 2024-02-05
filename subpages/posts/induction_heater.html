@@ -131,19 +131,15 @@
       </h3>
       <img src = "https://content.instructables.com/F2Q/SUZV/J7UQUBP3/F2QSUZVJ7UQUBP3.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=9112c1b7681ecdf679b6592b8d77cd7e" width="580px" height="295px"></img>
       <p>
-         In this circuit, because the transistors switch at 0 volts (Hence the name, Zero Voltage Switching ZVS) they do not get very hot, but they should still be mounted on a heat sink if you are planning on running this circuit longer than 1 minute. I mounted both of the transistors on one heat sink. When you do this, make sure you isolate the metal backs of the FETs from the heat sink. If they both touch, it will short out and blow out your FETs. My heat sink was from a computer power supply, and already came with a piece of insulating silicone, so my transistors are isolated. To make sure that your transistors are isolated, touch your multi-meter to the middle pin of both transistors, the drain. If you get continuity, then your FETs are not isolated.
+         In this circuit, because the transistors switch at 0 volts (Hence the name, Zero Voltage Switching/ZVS) they do not get very hot, but they should still be mounted on a heat sink if you are planning on running this circuit longer than 1 minute. I mounted both of the transistors on one heat sink. When you do this, make sure you isolate the metal backs of the FETs from the heat sink. If they both touch, it will short out and blow out your FETs. My heat sink was from a computer power supply, and already came with a piece of insulating silicone, so my transistors are isolated. To make sure that your transistors are isolated, touch your multi-meter to the middle pin of both transistors, the drain. If you get continuity, then your FETs are not isolated.
       </p>
       <br>
       <h3>
-        Step 2 - Prepare the High Vaccum Pump
+        Step 2 - The Capacitor Bank
       </h3>
-      <img src = "../../imgs/fusion_reactor_step2.png" width="580px" height="230px"></img>
+      <img src = "https://content.instructables.com/FB0/8BEP/J7UQUBZC/FB08BEPJ7UQUBZC.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=55a9d2ed7bd5eaff6751175858cfd1ea" width="580px" height="230px"></img>
       <p>
-         Install the oil diffusion pump (or turbo pump if you have a bit of luck scrounging or a higher budget). Fill the pump with quality diffusion pump oil to whatever fill level the pump documentation suggests, attach the inlet to a valve which then connects to the chamber (see diagram), and attach the outlet to a mechanical backing pump capable of reaching at least around 75 microns (any higher and the diffusion pump will not operate properly or the oil will oxidize quickly).
-
-Make sure the pump is sufficiently cooled, many oil diffusion pumps require water cooling, smaller ones such as the one pictured can get by with a decent air flow.
-
-Once this is assembled, turn on the mechanical pump and wait for the vacuum to reach at least 75 microns. Next you can test the high vacuum pump by turning on the boiler on the diffusion pump. After it warms up (could take a while), the vacuum should rapidly drop below the single micron range.
+         In this circuit, the capacitors get very hot. This is due to them always having current flowing thought them. Now, the capacitor value we need to make this circuit work properly is 0.47uF, so we will need the most amount of capacitors together to reach this same value, but have a larger surface area for heat dissipation. You also need to get the voltage rating of them above 400 volts due to inductive voltage spikes in the resonant circuit. What I did, is make a ring of copper, and add 10 .047uF capacitors in parallel around it. This makes the combined capacitor bank have a capacitance of .47uF, with lots of surface area for air cooling. This capacitor bank will be in parallel with the work coil.
       </p>
       <br>
       <h3>
