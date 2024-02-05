@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--LINK TO ARTICLE (remove later) https://www.instructables.com/DIY-Induction-Heater/ -->
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favico.png" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This a website with a bunch of widgets and stuff">
+    <meta name="keywords" content="Something">
+    <meta name="author" content="Me">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How To: Make a Fusion Reactor | Eli | Something</title> 
+
+    <style>
+        .parallax {
+          /* The image used */
+          background-image: url("https://content.instructables.com/FO7/YM3M/GI0TFXNU/FO7YM3MGI0TFXNU.jpg?auto=webp&frame=1&width=615&height=1024&fit=bounds&md=48dc09ffb72d9ba74ae4723489676fb5");
+          
+          /* Set a specific height */
+          min-height: 500px;
+          
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1 style="text-align:left"><img src="../../favicon.png" height="150" width="150"> How To: Fusion Reactor | Eli | Something</h1>
+        <link rel="stylesheet" href="../../style.css">
+    </header>
+
+    <nav>
+        <a href="../../">Home</a>
+        <a href="../about">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="../projects/ryan" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Ryan</a>
+              <a href="../projects/marcus" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Marcus</a>
+              <a href="../projects/eli" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">Eli</a>
+            </div>
+          </div>
+        <a href="../random">Other Stuff</a>
+        <a href="../waiver">.</a>
+    </nav>
+
+    <div class="parallax"></div>
+    <section>
+      <h2>
+        How To: Make an induction heater, from home
+      <h2>
+      <img src = "https://c8.alamy.com/comp/2BWXA9N/emoticon-showing-thumb-up-2BWXA9N.jpg" width="295px" height="295px"></img>
+      <p>
+        A little background on what this is, though, if you're not aware of what an induction heater is it's most likely not safe for you to be playing with this.
+        <br>
+        <br>
+        An induction heater is a small electromagnetic device, capable of heating up certian types of metal incredibly quickly, while remaining harmless to other things (I.e wood, human skin, etc.)
+        <br>
+        <br>
+        This is a tutorial on making one from scratch, but, however, you can find the main component of an induction heater on EBay or other places for relativitaly cheap, and all you really need to do is connect it to power & make sure it has proper airflow
+        A disclaimer:
+        <br>
+        The stuff you heat up is going to be very, very hot: Like, we're talking red-hot here. Don't touch it, keep fire prevention materials nearby, dunk it in ice water or something idk
+        <br>
+        We're playing with some dangerous voltages here, after all we're using magnets to heat things up to around 900F/460C. We are not responsible if you are harmed.
+      </p>
+      <br>
+      <h3>
+        How it Works
+      </h3>
+      <p>
+        Many of you who are reading this may be asking "What is a ZVS driver"? Well, it is an extremely efficient oscillator circuit that is able to create an extremely powerful electromagnetic field that heats up the metal. It is the backbone of the induction heater that this instructable is showing you how to make.
+        <br>
+        To understand how this power supply works, I will explain the different sections of it. The first section is the 24 volt power supply. The power supply needs to produce 24 volts at a current of 10 amps. For my power supply, I will be using two sealed lead acid batteries wired in series. The power is then fed into the ZVS driver board. The ZVS oscillator pushes and pulls current though a coil around the object that is being heated. This constant changing of the current's direction creates a fluctuating magnetic field. This induces many small eddy currents in the metal(refer to the diagram above). All of these currents are relatively high, and because of the low resistance of the target metal, heat is generated. According to ohms law, power converted to heat in a resistive circuit is P=I^2*R.
+        <br>
+        Now, the metal type of the object that is being heated is very important. Ferrous metals have a higher magnetic permeability, so they are able to harness more energy from the magnetic field. This allows them to be heated quicker than other materials. Metals, like aluminum, have a lower magnetic permeability, so it takes longer for them to heat up. Things that have a high resistance and low magnetic permeability, like a human finger, will not be heated at all by an induction heater. The resistance of the material is also very important. If you have a higher resistance in the target metal, then less current will flow, so the power converted to heat gets exponentially smaller. If you have a metal with a lower resistance, then the current will be higher, but power loss will be lower due to ohms law. It is a little bit complicated, but because of the relationship between resistance and power output, the highest power output is achieved when the resistance of the object approaches 0.
+        <br>
+        The ZVS oscillator is the most complex part of this circuit, so I am going to explain how it works. First of all, when the current is switched on, it flows though 2 inductive chokes into each side of the coil. The choke is to make sure the circuit does not draw to much amperage on start up. The current also flows thought the two 470 ohm resistors into the gates of the two Mosfets. Now, because no component is perfect, one Mosfet is going to turn on first. When this happens, it hogs all the gate current from the other Mosfet. It will also draw the drain of that Mosfet that is on to ground. This will not only let current flow though the coil to ground, but it will also let current flow though one of the fast diodes form the other gate of the other Mosfet, locking it off. Because there is a capacitor in parallel with the coil, it creates a resonant tank circuit that starts oscillating. Because of this resonant action, the drain of the other Mosfet will swing back and forth in its voltage, eventually reaching 0 volts. Once this voltage is reached, the gate charge from the Mosfet that is on will discharge though the fast diode into the drain of the opposite Mosfet, effectivly shutting it off. With this Mosfet off, the other Mosfet has the opportunity to turn on. After this, the cycle repeats thousands of times per second. The 10K resistor is meant to deplete any excess gate charge on the Mosfet, because it is like a capacitor, and the Zener diode is meant to keep the gates of the mosfets at 12 volts or under so they do not explode. This high frequency high power oscillator is what allows metal objects to be heated.
+        <br>
+        Now, it's time to build this thing!
+      </p>
+      <h3>
+        Materials
+      </h3>
+      <p>
+        You're gonna need:
+        <br>
+        -<a href="https://www.lcsc.com/product-detail/MOSFET_IR_IRFP260MPBF_IRFP260MPBF_C2679.html">IRFP260 Mosfets</a>
+        <br>
+        -<a href="https://www.lcsc.com/product-detail/Diodes-Rectifiers-Hyperfast_Ultrafast-diodesSF58_C54544.html">Fast Diodes</a>
+        <br>
+        -<a href="https://lcsc.com/product-detail/Zener-Diodes_Zener-diode-12V-1W_C36751.html">12 volt Zener Diodes</a>
+        <br>
+        -<a href="https://lcsc.com/product-detail/Metal-Oxide-Resistors_220R-2200-5_C61340.html">220 Ohm resistors</a>
+        <br>
+        -<a href="https://www.lcsc.com/product-detail/Metal-Film-Resistor-TH_10KR-1002-1_C57436.html">10K Resistors</a>
+        <br>
+        -10x <a href="https://lcsc.com/product-detail/Metallized-Polyester-Film-Capacitor_Calibration-capacitor470nF-474-100V-5_C45039.html">/.047uF capacitors</a>
+        <br>
+        -2x <a href="https://www.amazon.com/gp/product/B00EZC6F3U/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=tannertech10-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00EZC6F3U&linkId=ccbf57f1e73e7c47160f76e5be8b8bc4">50uH inductors (Computer power supply)</a>
+        <br>
+        -<a href="https://www.amazon.com/gp/product/B073311SKV/ref=as_li_qf_sp_asin_il_tl?camp=1789&creative=9325&creativeASIN=B073311SKV&ie=UTF8&linkCode=as2&linkId=12acecfedb2a02c9336c0c6c5a5550d7&tag=tannertech10-20">Copper wire</a>
+        <br>
+        -Wood
+        <br>
+        -2x <a href="https://www.amazon.com/gp/product/B003S1RQ2S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=tannertech10-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B003S1RQ2S&linkId=a2a819e59a235dc5ce6fcac9fdc2d71f">Sealed Lead Acid Batteries</a>        
+      </p>
+      <hr>
+      <h3>
+        Tools
+      </h3>
+      <p>
+        -<a href="https://www.amazon.com/gp/product/B06XZ31W3M/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=tannertech10-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XZ31W3M&linkId=a70a896475a5cd24c85f1c3ef3c3b8d9&th=1">Soldering Iron</a>
+        <br>
+        -<a href="https://www.amazon.com/gp/product/B000JNNWQ2/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=tannertech10-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B000JNNWQ2&linkId=ae74aa37c488a4544a2fad4a2e24e36e">Wire strippers/cutters</a>
+        <br>
+        -<a href="https://www.amazon.com/gp/product/B01ISAMUA6/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=tannertech10-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01ISAMUA6&linkId=2e06af3839289afb1051283cfd6d4539">Multimeter/a>
+      </p>
+      <h3>
+        Step 1 - Transitors & Cooling
+      </h3>
+      <img src = "https://content.instructables.com/F2Q/SUZV/J7UQUBP3/F2QSUZVJ7UQUBP3.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=9112c1b7681ecdf679b6592b8d77cd7e" width="580px" height="295px"></img>
+      <p>
+         In this circuit, because the transistors switch at 0 volts (Hence the name, Zero Voltage Switching ZVS) they do not get very hot, but they should still be mounted on a heat sink if you are planning on running this circuit longer than 1 minute. I mounted both of the transistors on one heat sink. When you do this, make sure you isolate the metal backs of the FETs from the heat sink. If they both touch, it will short out and blow out your FETs. My heat sink was from a computer power supply, and already came with a piece of insulating silicone, so my transistors are isolated. To make sure that your transistors are isolated, touch your multi-meter to the middle pin of both transistors, the drain. If you get continuity, then your FETs are not isolated.
+      </p>
+      <br>
+      <h3>
+        Step 2 - Prepare the High Vaccum Pump
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step2.png" width="580px" height="230px"></img>
+      <p>
+         Install the oil diffusion pump (or turbo pump if you have a bit of luck scrounging or a higher budget). Fill the pump with quality diffusion pump oil to whatever fill level the pump documentation suggests, attach the inlet to a valve which then connects to the chamber (see diagram), and attach the outlet to a mechanical backing pump capable of reaching at least around 75 microns (any higher and the diffusion pump will not operate properly or the oil will oxidize quickly).
+
+Make sure the pump is sufficiently cooled, many oil diffusion pumps require water cooling, smaller ones such as the one pictured can get by with a decent air flow.
+
+Once this is assembled, turn on the mechanical pump and wait for the vacuum to reach at least 75 microns. Next you can test the high vacuum pump by turning on the boiler on the diffusion pump. After it warms up (could take a while), the vacuum should rapidly drop below the single micron range.
+      </p>
+      <br>
+      <h3>
+        Step 3 - Build Inner Grid
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step3.png" width="580px" height="230px"></img>
+      <p>
+         The inner grid (where the high voltage is applied) must now be built and attached to a high voltage feedthrough.
+
+          It is best to use a metal such as tungsten for the grid wires since it has a very high melting point, and the grid will get extremely hot during high power runs.
+
+          This can be built however you wish, as long as it resembles a spherical shape of roughly 1-1.5 inches in diameter (for a 6-8" chamber), it should work fine.
+
+          The grid should be internally attached to an electrical feedthrough such as the one pictured in the second image. This feedthrough needs to be rated for the cathode voltage that will be used, typically 40kv is a good target voltage.
+      </p> 
+      <br>
+      <h3>
+        Step 4 - Assemble the Deuterium System
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step4.png" width="580px" height="230px"></img>
+      <p>
+        Deuterium gas is used as the fuel for this fusion reactor. You will need to purchase a tank of this gas (unless you wish to do electrolysis on heavy water, this process will not be documented here but nothing more than a small Hoffman Apparatus is required - higher purity gas can be gotten from a compressed tank).
+
+Attach a high pressure regulator directly to the tank, add an extremely fine-metering needle valve after this (or a laser drilled orifice in the range of 5 microns), then attach this to the chamber. A ball valve can also be installed between the regulator and the needle valve since needle valves are not shutoff valves.
+
+See the attached diagram now updated with the deuterium handling system.
+      </p>
+      <br>
+      <h3>
+        Step 5 - High Voltage
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step5.png" width="233px" height="225px"></img>
+      <p>
+        If you can purchase a power supply (occasionally but not commonly found surplus) appropriate for fusion use, the high voltage becomes very simple. Simply take the output of the 40kv negative supply and attach it to the chamber with a physically large high voltage 50-100k ohm ballast resistor in series (large enough that its length will not flash-over if 40kv is applied to it in a plasma run-away or arc discharge).
+
+The difficulty is that it is often difficult if not impossible to find an appropriate fully assembled DC supply of this voltage level that is affordable to the amateur scientist.
+
+Pictured is my high frequency ferrite transformer pair, with a 4-stage multiplier seen behind it.
+
+If a fully assembled power supply (typically manufactured by either Glassman or Spellman), there are a few options:
+-Find an x-ray transformer, and if necessary either reverse the rectifiers for negative polarity or add rectifiers if it has none (an x-ray transformer core won't have rectifiers, it probably will if it is in its oil tank)
+-Build a switching high frequency ferrite power supply. This is what I did, however it requires a bit of EE experience since several aspects must be resonant and if it is ever taken out of tune, the transistors will burn out. Probably not the best option for people with little electrical background.
+      </p>
+      <br>
+      <h3>
+        Step 6 - Setup Neutron Detection
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step6.png" width="580px" height="300px"></img>
+      <p>
+        The proof of fusion (and a quantitative analysis of how much fusion) is obtained through detecting neutron radiation, the byproduct of a D-D fusion reaction. There are three options which will be described. They are in order of descending ease of setup.
+
+        <br>
+        <br>
+        -A Neutron Bubble Dosimeter
+        <br>
+        A bubble dosimeter is a small unit with a gel in it that forms bubbles when ionized by neutron radiation. This is the easiest form of neutron detection available since all you have to do is unscrew the top and set it next to the fusor. Some of the drawbacks are that it is an integrative detector which means all you get is a total neutron emission number over the time that it was used, rather than an instantaneous neutron rate. Additionally, they are somewhat hard to get since the only company to make them is Bubbletech in Canada, which has a minimum order of 3 with steep shipping and handling (expect to spend $700+ if ordering directly from them not in a group buy). Additionally, they tend to be fairly worn out after a year of shelf life (although I've kept mine in a refrigerated storage container at 50*F and it seems to be like new after I think more than a year). The advantage is that calibration data is provided with purchase and of course it is easy.
+        <br>
+        <br>
+        -Silver Activation
+        <br>
+        When silver is placed near the reactor (with a moderator [paraffin wax, water, HDPE, etc] between it and the neutron source, since only thermal neutrons will activate the material) it becomes slightly radioactive with decent neutron fluxes. It has a short half life of only a few minutes, but if you quickly put a geiger counter next to the silver, counts can be detected. In my best runs, I have gotten a piece of silver to about 250CPM over background on a CDV-700 geiger-counter. The disadvantages of this are that it requires a decent neutron flux (at least about 100,000 neutrons/s) which is above the average "beginner's first run" neutron rate. Also, it is somewhat difficult to calibrate, and the counts can't be taken until after the fusor has been shut off.
+        <br>
+        <br>
+        -A Proportional Tube
+        <br>
+        Tubes can be purchased which are filled with either BF3 or Helium-3 (some very old tubes are Boron-10 lined inert gas tubes). These tubes, similar to a geiger counter, can be used with a counting device to detect electrical pulses when neutrons pass through the tube. Either an all-in-one counter can be used, often made by a company called Ludlum, or a modular counting system can be made using NIM modules. The tube is surrounded by about 2 inches of moderating material such as wax or water. This is by far the most accurate and useful form of neutron detection, however the cost of a new tube is prohibitive to most people, and they are extremely rare on the surplus market. Also, counting equipment can become quite costly.
+        <br>
+        <br>
+        NIM Configuration: If you chose to make a NIM setup as I have, the typical layout is a charge sensitive pre-amplifier at the head of the proportional tube, which is plugged into both a high voltage power supply generating positive polarity voltage appropriate for the tube (in the range of 800V-2kV generally). The amplifier also hooks into a shaping amplifier, which is followed by a Single Channel Analyzer (for setting the detection discrimination level), followed by a pulse counter and/or rate meter.
+        <br>
+        <br>
+        Shown in the first picture is my NIM setup, the second picture is the pre-amplifier attached to a moderated helium-3 tube, the third picture is a bubble detector after being exposed to neutrons.
+      </p>
+      <br>
+      <h3>
+        Step 7 - Fire it Up (And cross your fingers, you might die here)
+      </h3>
+      <img src = "../../imgs/fusion_reactor_step7.png" width="580px" height="580px"></img>
+      <p>
+        Time to turn it on (don't forget to cover any viewports/cameras with lead! Also x-rays can pour out of ceramic feedthroughs so point them away from people. It is a good idea to be monitoring for x-rays where any people are present). The basic procedure is:
+        <br>
+        <br>
+        -Turn on the roughing pump and wait for sufficient backing pressure, turn on the diffusion or turbo pump and wait for it to fully warm up or achieve running speed
+        <br>
+        -Throttle the chamber back (with the valve between the diffusion/turbo pump and the chamber)
+        <br>
+        -Ever so slightly open the needle valve to the deuterium tank
+        <br>
+        -Turn up the high voltage until either plasma establishes on the camera, or you've reached 40kv and nothing has happened (don't forget, you only get one chance in your life to screw up with voltages of this degree)
+        <br>
+        -If nothing has happened, keep admitting more gas and the pressure should keep going up. Plasma should form around 40kv at about 10-15 microns of deuterium.
+        <br>
+        <br>
+        If all goes well, you should see on your camera the image below, and you should be detecting neutrons at this point.
+        <br>
+        <br>
+Operation is quite a balancing act, since the voltage is controlled by both the power supply, but also by Paschen's Curve and Ohm's Law relating to the pressure in the chamber. Great patience is required to "Get the hang of it", but after doing so it becomes quite simple to run. Operation can be aided by an ion-gun which will not be discussed in this article.
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Coming Soon: Thermonuclear warheads tutorial</p>
+    </section>
+    
+    <br>
+    <br>
+    <br>
+        <section style="padding: 50px; background-color: white;">
+          <h2 style="color: black;">Other Posts</h2>
+          <a href="middle-school.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Ryan </a>
+          <br>
+          <a href="MMS.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Marcus </a>
+          <br>
+          <a href="ems.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> What I think about middle school by Eli </a>
+          <br>
+          <a href="Rhcoding.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Why github by Ryan </a>
+          <br>
+          <a href="Rhcoding2.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> learning to code by Ryan </a>
+          <br>
+          <a href="MHpost2.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Stock and Investment: Indices and ETFs by Marcus </a>
+          <br>
+          <a href="gamedev.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> About Game Development by Eli </a>
+          <br>
+          <a href="500.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> 500 </a>
+          <br>
+          <a href="inspiration.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> Inspiration </a>
+          <br>
+          <a href="scams.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> About Scammers </a>
+          <br>
+          <a href="h2o.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);"> dihydrogen monoxide (joke post lol) </a>
+          <br>
+          <a href="fusion-reactor.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">How To : Make a Fusion Reactor (From home!)  </a>
+          <br>
+          <a href="generic_blog_post.html" style="background-image: linear-gradient(to right,#54b3d6,#54b3d6 50%,#000 50%);">How To Make a Generic Blog Post</a>
+          </section>
+    <br>
+    <br>
+    <br>
+
+
+    <footer>
+        <p>&copy;this is a website</p>
+    </footer>
+</body>
+</html>
