@@ -145,7 +145,7 @@
       <h3>
         Step 3 - The Work Coil
       </h3>
-      <img src = "imgs/work_coil.png" width="580px" height="230px"></img>
+      <img src = "imgs/work_coil.png" width="1032px" height="457px"></img>
       <p>
          This part of the circuit is what generates the magnetic field. It is formed using copper wire. It is very important that you use copper. I started this project using a steel work coil. It did not work very well. When it was running with no load, it was drawing 14 amps!! When I switched it out with a copper coil, it drew only 3 amps. I think that this is because the ferrous material in the steel coil had eddy currents induced into it. Its high magnetic permeability made the coil the subject of the induction heating, which wasted the power and stopped it from heating the material inserted. I am not sure if this is the exact reason this wasn't working, but it is the most logical argument based on the evidence provided.
          <br>
@@ -155,7 +155,7 @@
       <h3>
         Step 4 - Building the Circut, Trial & Error
       </h3>
-      <img src = "imgs/building_circut_trial&error.png" width="580px" height="230px"></img>
+      <img src = "imgs/building_circut_trial&error.png" width="693px" height="540px"></img>
       <p>
         Building this circuit took a lot of trial and error. My number one issue was my original power supply and coil. The power supply is an 55 amp 12 volt switching supply. I think that this power supply drove the ZVS circuit with too high of an initial current, this blew out the mosfets. They exploded, like in the first picture. This probably could have been fixed by adding larger inductors, but I decided to just use lead acid batteries.
         <br>
@@ -167,7 +167,7 @@
       <h3>
         Step 5 - Building the Circut
       </h3>
-      <img src = "imgs/Building_the_circut.png" width="233px" height="225px"></img>
+      <img src = "imgs/Building_the_circut.png" width="698px" height="569px"></img>
       <p>
         To build this ZVS driver circuit, you will need to follow the above circuit diagram. I first took the zener diode and twisted it together with the 10k resistor. You can then take this pair of components, and solder it between the gate and ground of the mosfet. Make sure that the black end of the zener diode faces the gate. Then, solder the mosfets to a piece to perf board. Use the bottom side of the perf board to solder two fast diodes between the drain and the gates of each fet. Make sure that the white line faces the drain(pin 2). Then, attach the VCC wire -from your power supply- through 2 220 ohm resistors to the gate of each transistor. Ground both sources. Then, solder the work coil and capacitor bank in parallel with each other and solder each end to a different drain. Finally, run power to the drains of each mosfet through 2 50uh inductors. These can be toroidial cores with 10 turns of wire. With that, your circuit should be ready to use.
       </p>
@@ -183,7 +183,7 @@
       <h3>
         Step 7 - Testing the Induction Heater
       </h3>
-      <img src = "imgs/testing_iheater.png" width="580px" height="580px"></img>
+      <img src = "imgs/testing_iheater.png" width="696px" height="543px"></img>
       <p>
       To power up your induction heater, just connect it to the power supply you have. Then, insert the part you are trying to heat up into the coil. It should start heating. I was able to get a paperclip to red hot temperatures in 10 seconds. Other things, like a nail, took about 30 seconds. With these objects inserted, the current draw rises by about 2 amps. This is a fun circuit to build an play around with. It can also be used very practically. It can heat up objects without any of the soot that comes from smoke. It can even heat up isolated metal objects, like the getter material in vacuum tubes. It is also human safe, so you will not get burned by putting your finger inside the coil. It will, however, burn you if you touch an object that has already been heated.
       </p>
