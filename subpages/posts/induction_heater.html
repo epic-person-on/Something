@@ -143,75 +143,41 @@
       </p>
       <br>
       <h3>
-        Step 3 - Build Inner Grid
+        Step 3 - The Work Coil
       </h3>
       <img src = "../../imgs/fusion_reactor_step3.png" width="580px" height="230px"></img>
       <p>
-         The inner grid (where the high voltage is applied) must now be built and attached to a high voltage feedthrough.
-
-          It is best to use a metal such as tungsten for the grid wires since it has a very high melting point, and the grid will get extremely hot during high power runs.
-
-          This can be built however you wish, as long as it resembles a spherical shape of roughly 1-1.5 inches in diameter (for a 6-8" chamber), it should work fine.
-
-          The grid should be internally attached to an electrical feedthrough such as the one pictured in the second image. This feedthrough needs to be rated for the cathode voltage that will be used, typically 40kv is a good target voltage.
+         This part of the circuit is what generates the magnetic field. It is formed using copper wire. It is very important that you use copper. I started this project using a steel work coil. It did not work very well. When it was running with no load, it was drawing 14 amps!! When I switched it out with a copper coil, it drew only 3 amps. I think that this is because the ferrous material in the steel coil had eddy currents induced into it. Its high magnetic permeability made the coil the subject of the induction heating, which wasted the power and stopped it from heating the material inserted. I am not sure if this is the exact reason this wasn't working, but it is the most logical argument based on the evidence provided.
+         <br>
+         To make your coil, use stranded copper wire, and wrap it around a piece of PVC pipe about 9 times.
       </p> 
       <br>
       <h3>
-        Step 4 - Assemble the Deuterium System
+        Step 4 - Building the Circut, Trial & Error
       </h3>
       <img src = "../../imgs/fusion_reactor_step4.png" width="580px" height="230px"></img>
       <p>
-        Deuterium gas is used as the fuel for this fusion reactor. You will need to purchase a tank of this gas (unless you wish to do electrolysis on heavy water, this process will not be documented here but nothing more than a small Hoffman Apparatus is required - higher purity gas can be gotten from a compressed tank).
-
-Attach a high pressure regulator directly to the tank, add an extremely fine-metering needle valve after this (or a laser drilled orifice in the range of 5 microns), then attach this to the chamber. A ball valve can also be installed between the regulator and the needle valve since needle valves are not shutoff valves.
-
-See the attached diagram now updated with the deuterium handling system.
+        Building this circuit took a lot of trial and error. My number one issue was my original power supply and coil. The power supply is an 55 amp 12 volt switching supply. I think that this power supply drove the ZVS circuit with too high of an initial current, this blew out the mosfets. They exploded, like in the first picture. This probably could have been fixed by adding larger inductors, but I decided to just use lead acid batteries.
+        <br>
+        My second issue was the coil. In step 6, you saw that the steel coil did not work. This high current draw due to the steel coil blew a few mosfets too. In total, I lost about 6 mosfets to explosion. This may be bad, but I learned from my mistakes.
+        <br>
+        Over the course of this project, I built the circuit over again many times, but I will just explain how I built the most successful version.
       </p>
       <br>
       <h3>
-        Step 5 - High Voltage
+        Step 5 - Building the Circut
       </h3>
       <img src = "../../imgs/fusion_reactor_step5.png" width="233px" height="225px"></img>
       <p>
-        If you can purchase a power supply (occasionally but not commonly found surplus) appropriate for fusion use, the high voltage becomes very simple. Simply take the output of the 40kv negative supply and attach it to the chamber with a physically large high voltage 50-100k ohm ballast resistor in series (large enough that its length will not flash-over if 40kv is applied to it in a plasma run-away or arc discharge).
-
-The difficulty is that it is often difficult if not impossible to find an appropriate fully assembled DC supply of this voltage level that is affordable to the amateur scientist.
-
-Pictured is my high frequency ferrite transformer pair, with a 4-stage multiplier seen behind it.
-
-If a fully assembled power supply (typically manufactured by either Glassman or Spellman), there are a few options:
--Find an x-ray transformer, and if necessary either reverse the rectifiers for negative polarity or add rectifiers if it has none (an x-ray transformer core won't have rectifiers, it probably will if it is in its oil tank)
--Build a switching high frequency ferrite power supply. This is what I did, however it requires a bit of EE experience since several aspects must be resonant and if it is ever taken out of tune, the transistors will burn out. Probably not the best option for people with little electrical background.
+        To build this ZVS driver circuit, you will need to follow the above circuit diagram. I first took the zener diode and twisted it together with the 10k resistor. You can then take this pair of components, and solder it between the gate and ground of the mosfet. Make sure that the black end of the zener diode faces the gate. Then, solder the mosfets to a piece to perf board. Use the bottom side of the perf board to solder two fast diodes between the drain and the gates of each fet. Make sure that the white line faces the drain(pin 2). Then, attach the VCC wire -from your power supply- through 2 220 ohm resistors to the gate of each transistor. Ground both sources. Then, solder the work coil and capacitor bank in parallel with each other and solder each end to a different drain. Finally, run power to the drains of each mosfet through 2 50uh inductors. These can be toroidial cores with 10 turns of wire. With that, your circuit should be ready to use.
       </p>
       <br>
       <h3>
-        Step 6 - Setup Neutron Detection
+        Step 6 - The Base
       </h3>
-      <img src = "../../imgs/fusion_reactor_step6.png" width="580px" height="300px"></img>
+      <img src = "https://content.instructables.com/FOZ/X58P/J7UQUC02/FOZX58PJ7UQUC02.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=4d1857257dd591c899ce593f881edd33" width="580px" height="300px"></img>
       <p>
-        The proof of fusion (and a quantitative analysis of how much fusion) is obtained through detecting neutron radiation, the byproduct of a D-D fusion reaction. There are three options which will be described. They are in order of descending ease of setup.
-
-        <br>
-        <br>
-        -A Neutron Bubble Dosimeter
-        <br>
-        A bubble dosimeter is a small unit with a gel in it that forms bubbles when ionized by neutron radiation. This is the easiest form of neutron detection available since all you have to do is unscrew the top and set it next to the fusor. Some of the drawbacks are that it is an integrative detector which means all you get is a total neutron emission number over the time that it was used, rather than an instantaneous neutron rate. Additionally, they are somewhat hard to get since the only company to make them is Bubbletech in Canada, which has a minimum order of 3 with steep shipping and handling (expect to spend $700+ if ordering directly from them not in a group buy). Additionally, they tend to be fairly worn out after a year of shelf life (although I've kept mine in a refrigerated storage container at 50*F and it seems to be like new after I think more than a year). The advantage is that calibration data is provided with purchase and of course it is easy.
-        <br>
-        <br>
-        -Silver Activation
-        <br>
-        When silver is placed near the reactor (with a moderator [paraffin wax, water, HDPE, etc] between it and the neutron source, since only thermal neutrons will activate the material) it becomes slightly radioactive with decent neutron fluxes. It has a short half life of only a few minutes, but if you quickly put a geiger counter next to the silver, counts can be detected. In my best runs, I have gotten a piece of silver to about 250CPM over background on a CDV-700 geiger-counter. The disadvantages of this are that it requires a decent neutron flux (at least about 100,000 neutrons/s) which is above the average "beginner's first run" neutron rate. Also, it is somewhat difficult to calibrate, and the counts can't be taken until after the fusor has been shut off.
-        <br>
-        <br>
-        -A Proportional Tube
-        <br>
-        Tubes can be purchased which are filled with either BF3 or Helium-3 (some very old tubes are Boron-10 lined inert gas tubes). These tubes, similar to a geiger counter, can be used with a counting device to detect electrical pulses when neutrons pass through the tube. Either an all-in-one counter can be used, often made by a company called Ludlum, or a modular counting system can be made using NIM modules. The tube is surrounded by about 2 inches of moderating material such as wax or water. This is by far the most accurate and useful form of neutron detection, however the cost of a new tube is prohibitive to most people, and they are extremely rare on the surplus market. Also, counting equipment can become quite costly.
-        <br>
-        <br>
-        NIM Configuration: If you chose to make a NIM setup as I have, the typical layout is a charge sensitive pre-amplifier at the head of the proportional tube, which is plugged into both a high voltage power supply generating positive polarity voltage appropriate for the tube (in the range of 800V-2kV generally). The amplifier also hooks into a shaping amplifier, which is followed by a Single Channel Analyzer (for setting the detection discrimination level), followed by a pulse counter and/or rate meter.
-        <br>
-        <br>
-        Shown in the first picture is my NIM setup, the second picture is the pre-amplifier attached to a moderated helium-3 tube, the third picture is a bubble detector after being exposed to neutrons.
+        The base of your induction heater is just to support all of the components. I used a piece of 2x4 wood scrap. The circuit board, capacitor bank, and work coil were all hot glued to the wood. I think this setup makes it look cool.
       </p>
       <br>
       <h3>
