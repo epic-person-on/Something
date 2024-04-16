@@ -6,7 +6,13 @@
 </p>
 <br>
 <p align="center">  
-  Just a lil website with widgets and things, for a school assignment. *Conly voice* What- what else do we put here? something about Aperture Laboratories? okay, uh, yeah alright  
+  how 2 commit tax fraud
+  
+  step 1: avoid tax
+  
+  step 2: ???
+  
+  step 4: done
 </p>
 <br>
 <p align="center">
