@@ -1,11 +1,7 @@
 <h1 align="center"> 
   Something
 </h1>
-<p align="center">
-<!--   <img style="border-radius: 100px;" width="400px" height="300px" src="https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg"></img> -->
-</p>
-<br>
-<p align="center">  
+
   how 2 commit tax fraud:
   
   step 1: avoid tax
