@@ -5,5 +5,4 @@ its a special version of exmeet with no passcode
 
 [disguised version](https://epic-person-on.github.io/Something/subpages/secret/exmeet/hidden.html)
 
-Click [here](https://www.geeksforgeeks.org/){:target="_blank"}  
 
