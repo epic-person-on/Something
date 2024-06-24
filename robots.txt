@@ -20,4 +20,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://epic-person-on.github.io/Something
+Sitemap: https://something-epic.netlify.app/sitemap-netlify.xml
