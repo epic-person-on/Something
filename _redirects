@@ -1,3 +1,6 @@
 /home                /
 /games               /subpages/games
-/blogs              https://blogs.mtdv.me/videos/something-epic
+/blogs               https://blogs.mtdv.me/blog/posts/something-epic-blog
+/blog                https://blogs.mtdv.me/blog/posts/something-epic-blog
+/posts               /subpages/     
+/post                https://blogs.mtdv.me/blog/posts/something-epic-blog
